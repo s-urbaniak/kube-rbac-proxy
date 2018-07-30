@@ -42,6 +42,10 @@ import (
 	"github.com/brancz/kube-rbac-proxy/auth"
 )
 
+type configfile struct {
+	AuthorizationConfig *auth.AuthzConfig `json:"authorization,omitempty"`
+}
+
 type config struct {
 	insecureListenAddress  string
 	secureListenAddress    string
@@ -129,10 +133,13 @@ func main() {
 			glog.Fatalf("Failed to read resource-attribute file: %v", err)
 		}
 
-		err = yaml.Unmarshal(b, &cfg.auth.Authorization.ResourceAttributes)
+		configfile := configfile{}
+		err = yaml.Unmarshal(b, &configfile)
 		if err != nil {
-			glog.Fatalf("Failed to parse resource-attribute file content: %v", err)
+			glog.Fatalf("Failed to parse config file content: %v", err)
 		}
+
+		cfg.auth.Authorization = configfile.AuthorizationConfig
 	}
 
 	auth, err := auth.BuildAuthHandler(kubeClient, &cfg.auth)
