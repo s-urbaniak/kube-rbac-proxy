@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.21.3 / 2026-04-27
+## 0.22.0 / 2026-04-27
 
 - [ENHANCEMENT] Bump dependencies
 - [ENHANCEMENT] Update Go to 1.26.2
