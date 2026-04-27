@@ -3,6 +3,7 @@
 ## 0.22.0 / 2026-04-27
 
 - [ENHANCEMENT] Bump dependencies
+- [ENHANCEMENT] Update Kubernetes dependencies to 1.36
 - [ENHANCEMENT] Update Go to 1.26.2
 - [ENHANCEMENT] Update prometheus-example-app to v0.6.0
 - [BUGFIX] Update stale static-auth example image reference
