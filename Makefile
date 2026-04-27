@@ -4,6 +4,8 @@ GO111MODULE=on
 export GO111MODULE
 
 PROGRAM_NAME?=kube-rbac-proxy
+# This repository moved to github.com/kube-rbac-proxy/kube-rbac-proxy.
+# Keep the old module path until the 1.0 release, where this is subject to change.
 GITHUB_URL=github.com/brancz/kube-rbac-proxy
 GOOS?=$(shell uname -s | tr A-Z a-z)
 GOARCH?=$(shell go env GOARCH)
