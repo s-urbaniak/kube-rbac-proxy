@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.22.0 / 2026-04-27
+
+- [ENHANCEMENT] Bump dependencies
+- [ENHANCEMENT] Update Go to 1.26.2
+- [ENHANCEMENT] Update prometheus-example-app to v0.6.0
+- [BUGFIX] Update stale static-auth example image reference
+
 ## 0.21.2 / 2026-03-19
 
 - [ENHANCEMENT] Bump dependencies
